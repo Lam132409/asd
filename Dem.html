@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dem</title>
+</head>
+<body>
+<input type="number" id="a">
+<button onclick="count()" ></button>
+<p id="count"></p>
+<script>
+    function count() {
+        let b = 0;
+        document.getElementById('count').innerHTML="";
+        let a = parseInt(document.getElementById('a').value);
+        if (a < 0)
+            document.getElementById('count').innerHTML ="Số nhập không hợp lệ mời nhập lại";
+        else{
+            for (let c = 2; c <= a; c++) {
+                if (a % c == 0) {
+                    b++;
+                }
+            }
+            document.getElementById('count').innerHTML = b
+        }
+    }
+</script>
+</body>
+</html>
